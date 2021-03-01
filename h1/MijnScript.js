@@ -1,9 +1,8 @@
-var a = 10;
-
-if (a > 9) {
-    console.log("a is Groter dan 9")
+var mijnauto = {
+    merk: "Ford",
+    type: "Mondeo",
+    aantalwielen: 4,
+    kleur: "blauw",
 }
 
-for (var i = 0; i < 10; i++) {
-    console.log("i heeft nu de waarde "+ i)
-}
+console.log(mijnauto.merk)
