@@ -10,18 +10,21 @@
             margin: 0 0 0 0;
             padding: 0 0 0 0;
         }
+
         body {
             font-family: 'Copse', Serif;
             text-align: center;
         }
+
         img {
-             height: 300px;
-             width: 300px;
-             border: 0px;
+            height: 300px;
+            width: 300px;
+            border: 0px;
         }
+
         #pics {
-            width: 950px;
-            height: 950px;
+            width: 909px;
+            height: 909px;
             border: solid 1px black;
             margin: auto;
         }
@@ -44,10 +47,31 @@
 
 </div>
 
-<script >
+<script>
     var plaatjes = document.getElementsByTagName("img");
-    var random = (Math.floor(Math.random()*9)+1);
-    plaatjes[5].src = "aap" +random + ".jpg"
+    var randomNumbers = [];
+    var random = 0;
+
+    while (randomNumbers.length < 9) {
+        random = (Math.floor(Math.random() * 9) + 1);
+        if (randomNumbers.lastIndexOf(random) == -1) {
+            randomNumbers.push(random)
+        }
+        console.log(randomNumbers)
+
+    }
+    random = 0;
+    for (var plaatje in plaatjes) {
+        plaatjes[plaatje].src = "aap" + randomNumbers[random] + ".jpg";
+        random++;
+    }
+
+
+    /* for(var i = 0 < plaatjes.length; i++;) {
+          random = (Math.floor(Math.random() *9) +1);
+         plaatjes[i].src = "aap" +random + ".jpg";
+
+     }*/
 </script>
 </body>
 </html>
