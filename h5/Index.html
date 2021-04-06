@@ -27,8 +27,8 @@
             margin: auto;
         }
 
-        </style>
-    </head>
+    </style>
+</head>
 <body>
 <h1>MonkeyChooser</h1>
 <h3>Choose your favourite monkey</h3>
@@ -37,8 +37,15 @@
 </div>
 <script>
     pics = document.getElementById("pics");
-    function createPicsHolders() {
+    createPicsHolders();
 
+    function createPicsHolders() {
+        for (var i = 0; i < 9; i++) {
+            pictureHolder = document.createElement("div");
+            pictureHolder.className = "aappicture";
+            pictureHolder.id = "picture-holder-"+i;
+            pics.appendChild(pictureHolder)
+        }
     }
 </script>
 </body>
