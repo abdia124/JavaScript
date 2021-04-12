@@ -41,6 +41,7 @@
             height: 300px;
 
             object-fit: cover;
+        }
 
     </style>
 </head>
@@ -69,11 +70,21 @@
         for (var i = 0; i < pictureHolders.length; i++) {
             favoriet = document.createElement("div");
             favoriet.className = "favoriet";
+            favoriet.id = "favoriet" + (i + 1);
             aapPlaatje = document.createElement("img");
             aapPlaatje.src = "img2/aap" + (i + 1) + ".jpg";
+            aapPlaatje.id = (i + 1);
+            aapPlaatje.addEventListener("click", function (){
+                maakFavoriet(this.id);
+            });
             pictureHolders[i].appendChild(favoriet);
             pictureHolders[i].appendChild(aapPlaatje);
         }
+    }
+    function maakFavoriet (id){
+        console.log("maak mij favoriet! het gaat om aap..." + id);
+        favoriet = document.getElementById("favoriet" +id)
+        favoriet.style.backgroundImage = "url('img2/hart.jpg')";
     }
 </script>
 </body>
