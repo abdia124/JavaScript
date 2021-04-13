@@ -21,10 +21,10 @@
         }
 
         div.favoriet {
+            background-size: contain;
             width: 300px;
             height: 150px;
             background-color: blue;
-            background-image: none;
             background-repeat: no-repeat;
             background-position: center;
         }
@@ -87,12 +87,12 @@
 
     function maakFavoriet(id) {
         console.log("maak mij favoriet! het gaat om aap..." + id);
-        notsofavoriet = document.getElementByClassName("favoriet");
+        notsofavoriet = document.getElementsByClassName("favoriet");
         for (var i = 0; i < notsofavoriet.length; i++) {
             notsofavoriet[i].style.backgroundImage = "none";
         }
         favoriet = document.getElementById("favoriet" + id)
-        favoriet.style.backgroundImage = "url('img2/hart.jpg')";
+        favoriet.style.backgroundImage = "url('img2/hartb.png')";
     }
 </script>
 </body>
